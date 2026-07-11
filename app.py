@@ -20,7 +20,7 @@ if st.button("Generate Pitch", type="primary"):
             try:
                 # Call your local FastAPI server
                 response = requests.post(
-                    "http://127.0.0.1:8000/generate-pitch", 
+                    "https://demo-pitch-generator-api.onrender.com/generate-pitch", 
                     json={"repo_url": repo_url}
                 )
                 
