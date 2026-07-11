@@ -31,7 +31,7 @@ def generate_demo_pitch(repo_context: str) -> DemoPitch:
     try:
         # Call Gemini using the latest fast, smart model
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.1-flash',
             contents=f"Analyze this repository and generate a hackathon demo pitch script:\n\n{repo_context}",
             config={
                 'system_instruction': system_instruction,
