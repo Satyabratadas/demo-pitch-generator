@@ -9,6 +9,7 @@ st.markdown("Did you just spend 36 hours coding? Exhausted? Drop your GitHub rep
 
 # The input box
 repo_url = st.text_input("Enter public GitHub Repository URL:", placeholder="https://github.com/psf/requests")
+BACKEND_URL = "https://demo-pitch-generator-api.onrender.com/generate-pitch"
 
 # The submit button
 if st.button("Generate Pitch", type="primary"):
@@ -19,10 +20,7 @@ if st.button("Generate Pitch", type="primary"):
         with st.spinner("Scanning repository and writing your script..."):
             try:
                 # Call your local FastAPI server
-                response = requests.post(
-                    "https://demo-pitch-generator-api.onrender.com/generate-pitch", 
-                    json={"repo_url": repo_url}
-                )
+                response = requests.post(BACKEND_URL, json={"repo_url": repo_url})
                 
                 if response.status_code == 200:
                     pitch = response.json()
