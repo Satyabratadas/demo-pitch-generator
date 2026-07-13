@@ -3,9 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, HttpUrl
 import uvicorn
 
-from backend.github_service import fetch_repository_context
-from backend.ai_service import generate_demo_pitch
-from backend.models import DemoPitch
+from github_service import fetch_repository_context
+from ai_service import generate_demo_pitch
+from models import DemoPitch
 
 app = FastAPI(
     title="Hackathon Demo Pitch Generator API",
