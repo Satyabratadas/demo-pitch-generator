@@ -1,7 +1,7 @@
 import os
 from google import genai
 from dotenv import load_dotenv
-from models import DemoPitch
+from backend.models import DemoPitch
 
 # Load environment variables from .env
 load_dotenv()
